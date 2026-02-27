@@ -25,11 +25,10 @@ class WelcomeFragment : Fragment
                 currentPage = 2
             } else {
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainer, LoginFragment())
+                    .replace(R.id.fragmentContainer, RegisterFragment())
                     .addToBackStack(null)
                     .commit()
             }
         }
         }
-    }
-}
+        }
