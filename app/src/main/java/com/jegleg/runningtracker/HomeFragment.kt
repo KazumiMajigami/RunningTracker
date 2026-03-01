@@ -28,7 +28,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // CATAT LARI → sementara cuma toast
         btnCatat.setOnClickListener {
-            android.widget.Toast.makeText(requireContext(), "Catat Lari clicked", android.widget.Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, RunEntryFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 }
