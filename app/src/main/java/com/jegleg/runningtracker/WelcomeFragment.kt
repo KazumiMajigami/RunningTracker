@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class WelcomeFragment : Fragment
-    (R.layout.fragment_welcome) {
+    (R.layout.fragment_beranda) {
 
     private var currentPage = 1
 

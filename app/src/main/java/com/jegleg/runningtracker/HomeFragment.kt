@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_beranda) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
