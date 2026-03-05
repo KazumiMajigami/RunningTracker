@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/softBackground"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@color/softBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,92 +14,113 @@
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="200dp"
             android:background="@drawable/header_bg"
+            android:gravity="center"
             android:orientation="vertical"
-            android:gravity="top|center_horizontal"
-            android:paddingTop="32dp">
+            android:paddingTop="50dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create Account"
-                android:textColor="@color/white"
-                android:textSize="28sp"
-                android:textStyle="bold" />
+                android:text="RUNTRACK"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Isi data dirimu untuk mulai berlari 🏃"
-                android:textColor="@color/white"
+                android:text="Let's Share Your Journey"
                 android:textSize="14sp"
-                android:alpha="0.8"
-                android:layout_marginTop="6dp" />
-
+                android:textColor="@color/white"
+                android:layout_marginTop="6dp"/>
         </LinearLayout>
 
-        <!-- CARD FORM -->
+        <!-- CARD -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:padding="24dp"
             android:orientation="vertical"
-            android:background="@color/cardWhite">
+            android:background="@drawable/card_bg">
 
-            <EditText
-                android:id="@+id/etName"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Nama Lengkap"
-                android:textColor="@color/textDark"
-                android:textColorHint="@color/textSoft"
-                android:backgroundTint="@color/headerColor"/>
-
-            <Spinner
-                android:id="@+id/spGender"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/headerColor"/>
-
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textColor="@color/textDark"
-                android:textColorHint="@color/textSoft"
-                android:backgroundTint="@color/headerColor"
-                android:layout_marginTop="16dp"/>
-
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textColor="@color/textDark"
-                android:textColorHint="@color/textSoft"
-                android:backgroundTint="@color/headerColor"
-                android:layout_marginTop="16dp"/>
-
-            <Button
-                android:id="@+id/btnSubmit"
-                android:layout_width="180dp"
-                android:layout_height="55dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="28dp"
-                android:text="Sign Up"
-                android:textAllCaps="false"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATAT AKTIVITAS LARI"
+                android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/headerColor"/>
+                android:textColor="@color/textDark"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- TANGGAL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TANGGAL"
+                android:textSize="12sp"
+                android:textColor="@color/textSoft"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="dd/mm/yyyy"
+                android:textColor="@color/textDark"
+                android:textColorHint="@color/textSoft"
+                android:backgroundTint="@color/headerColor"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- JARAK -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JARAK LARI"
+                android:textSize="12sp"
+                android:textColor="@color/textSoft"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Contoh: 5.3"
+                    android:textColor="@color/textDark"
+                    android:textColorHint="@color/textSoft"
+                    android:backgroundTint="@color/headerColor"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textDark"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/headerColor"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
     </LinearLayout>
+
 
 </ScrollView>
