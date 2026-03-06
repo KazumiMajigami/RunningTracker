@@ -5,4 +5,6 @@
     <color name="textDark">#134E4A</color>
     <color name="textSoft">#0D9488</color>
     <color name="white">#FFFFFF</color>
+    <color name="cardColor">#FFFFFF</color>
+    <color name="red">#FF0000</color>
 </resources>

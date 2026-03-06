@@ -29,7 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_beranda) {
         // CATAT LARI → sementara cuma toast
         btnCatat.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, RunEntryFragment())
+                .replace(R.id.fragmentContainer, Catatlari())
                 .addToBackStack(null)
                 .commit()
         }

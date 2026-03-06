@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
-class RunEntryFragment : Fragment(R.layout.fragment_catatlari) {
+class Catatlari : Fragment(R.layout.fragment_catatlari) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -18,7 +18,6 @@ class RunEntryFragment : Fragment(R.layout.fragment_catatlari) {
         val btnSave = view.findViewById<Button>(R.id.btnSave)
 
         btnSave.setOnClickListener {
-
             val tanggal = etTanggal.text.toString()
             val jarak = etJarak.text.toString()
             val durasi = etDurasi.text.toString()
@@ -28,8 +27,7 @@ class RunEntryFragment : Fragment(R.layout.fragment_catatlari) {
                 return@setOnClickListener
             }
 
-            // nanti bisa disimpan ke database
-
+            // Simpan ke database (nanti)
             Toast.makeText(requireContext(), "Data berhasil disimpan ✅", Toast.LENGTH_SHORT).show()
         }
     }
