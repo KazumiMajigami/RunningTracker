@@ -12,6 +12,7 @@ class Catatlari : Fragment(R.layout.fragment_catatlari) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Inisialisasi View berdasarkan ID di fragment_catatlari.xml
         val etTanggal = view.findViewById<EditText>(R.id.etTanggal)
         val etJarak = view.findViewById<EditText>(R.id.etJarak)
         val etDurasi = view.findViewById<EditText>(R.id.etDurasi)
@@ -19,16 +20,41 @@ class Catatlari : Fragment(R.layout.fragment_catatlari) {
 
         btnSave.setOnClickListener {
             val tanggal = etTanggal.text.toString()
-            val jarak = etJarak.text.toString()
+            val jarakInput = etJarak.text.toString()
             val durasi = etDurasi.text.toString()
 
-            if (tanggal.isEmpty() || jarak.isEmpty() || durasi.isEmpty()) {
-                Toast.makeText(requireContext(), "Isi semua data!", Toast.LENGTH_SHORT).show()
+            // 1. Validasi Input
+            if (tanggal.isEmpty() || jarakInput.isEmpty() || durasi.isEmpty()) {
+                Toast.makeText(requireContext(), "Semua kolom harus diisi!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Simpan ke database (nanti)
-            Toast.makeText(requireContext(), "Data berhasil disimpan ✅", Toast.LENGTH_SHORT).show()
+            // 2. Tampung ke dalam Data Class
+            // Jarak dikonversi ke Double, Durasi tetap String (atau bisa Int jika perlu)
+            val dataLari = RunModel(
+                tanggal = tanggal,
+                jarak = jarakInput.toDoubleOrNull() ?: 0.0,
+                durasi = durasi
+            )
+
+            // 3. Logika setelah data ditampung (Contoh: Tampilkan Toast)
+            Toast.makeText(
+                requireContext(),
+                "Data Berhasil Ditampung: ${dataLari.jarak} KM",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            // Bersihkan form
+            etTanggal.text.clear()
+            etJarak.text.clear()
+            etDurasi.text.clear()
         }
     }
 }
+
+// DATA CLASS (Taruh di luar class fragment agar rapi)
+data class RunModel(
+    val tanggal: String,
+    val jarak: Double,
+    val durasi: String
+)
