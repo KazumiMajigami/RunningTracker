@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.fragment.app.Fragment
+import android.content.Intent
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
 
@@ -56,6 +57,10 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             """.trimIndent()
 
             Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, HomeFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 }

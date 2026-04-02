@@ -48,11 +48,14 @@ class Catatlari : Fragment(R.layout.fragment_catatlari) {
             etTanggal.text.clear()
             etJarak.text.clear()
             etDurasi.text.clear()
+
+            // Go back to Profile or Previous screen after saving
+            parentFragmentManager.popBackStack()
         }
     }
+
 }
 
-// DATA CLASS (Taruh di luar class fragment agar rapi)
 data class RunModel(
     val tanggal: String,
     val jarak: Double,

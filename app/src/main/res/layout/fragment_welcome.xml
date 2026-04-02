@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:background="#F1F5F4">
 
-    <!-- PAGE 1 (sudah ada) -->
+    <!-- PAGE 1 -->
     <LinearLayout
         android:id="@+id/page1"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible">   <!-- tambahkan visibility agar default terlihat -->
+        android:visibility="visible">
 
-        <!-- HEADER (konten page1) -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="240dp"
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:alpha="0.8"
-                android:text="Halo 👋"
+                android:text="@string/halo"
                 android:textColor="#ffff"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Running Tracker"
+                android:text="@string/running_tracker"
                 android:textColor="#ffff"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -47,41 +47,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:alpha="0.7"
-                android:text="Track your run. Anytime, anywhere."
+                android:text="@string/track_run_desc"
                 android:textColor="#ffff"
                 android:textSize="17sp" />
         </LinearLayout>
-
-        <!-- kamu bisa tambah konten lain di page1 di sini -->
     </LinearLayout>
 
-    <!-- PAGE 2 (TAMBAHKAN) -->
+    <!-- PAGE 2 -->
     <LinearLayout
         android:id="@+id/page2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="gone">   <!-- awalnya tersembunyi -->
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Page 2"
+            android:text="@string/page_2"
             android:textSize="24sp"
             android:textColor="@color/headerColor" />
-
-        <!-- tambah konten page2 di sini jika perlu -->
     </LinearLayout>
 
-    <!-- FLOATING BUTTON (sudah ada) -->
+    <!-- FLOATING BUTTON -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
         android:layout_gravity="bottom|end"
-        android:contentDescription="Next"
+        android:contentDescription="@string/next"
         app:backgroundTint="#2F7F7B"
         app:srcCompat="@android:drawable/ic_media_next"/>
 

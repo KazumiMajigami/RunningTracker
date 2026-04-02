@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class WelcomeFragment : Fragment(R.layout.fragment_beranda) {
+class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
     private var currentPage = 1
 

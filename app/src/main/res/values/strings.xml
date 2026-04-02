@@ -14,4 +14,10 @@
     <string name="hint_durasi">Durasi (menit)</string>
     <string name="save">Save</string>
 
+    <string name="halo">Halo \uD83D\uDC4B</string>
+    <string name="running_tracker">Running Tracker</string>
+    <string name="track_run_desc">Track your run. Anytime, anywhere.</string>
+    <string name="page_2">Page 2</string>
+    <string name="next">Next</string>
+
 </resources>
