@@ -58,7 +58,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
 
             Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, HomeFragment())
+                .replace(R.id.fragmentContainer, Catatlari())
                 .addToBackStack(null)
                 .commit()
         }

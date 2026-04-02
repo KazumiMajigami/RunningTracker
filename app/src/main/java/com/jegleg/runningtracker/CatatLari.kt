@@ -49,8 +49,11 @@ class Catatlari : Fragment(R.layout.fragment_catatlari) {
             etJarak.text.clear()
             etDurasi.text.clear()
 
-            // Go back to Profile or Previous screen after saving
-            parentFragmentManager.popBackStack()
+            // Go back to Profile or Previous screen after savin
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, ProfileFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 
