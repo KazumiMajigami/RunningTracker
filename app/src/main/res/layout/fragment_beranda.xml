@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F5F4">
 
-    <!-- PAGE 1 (sudah ada) -->
+    <!-- PAGE 1 -->
     <LinearLayout
         android:id="@+id/page1"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible">   <!-- tambahkan visibility agar default terlihat -->
+        android:orientation="vertical"
+        android:visibility="visible">
 
-        <!-- HEADER (konten page1) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="240dp"
@@ -52,29 +50,40 @@
                 android:textSize="17sp" />
         </LinearLayout>
 
-        <!-- kamu bisa tambah konten lain di page1 di sini -->
+        <!-- Tambahan konten page1 jika perlu -->
     </LinearLayout>
 
-    <!-- PAGE 2 (TAMBAHKAN) -->
+    <!-- PAGE 2 -->
     <LinearLayout
         android:id="@+id/page2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="gone">   <!-- awalnya tersembunyi -->
+        android:visibility="gone">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Page 2"
-            android:textSize="24sp"
-            android:textColor="@color/headerColor" />
+            android:text="Selamat datang! Kamu siap mulai?"
+            android:textSize="20sp"
+            android:textColor="@color/headerColor"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-        <!-- tambah konten page2 di sini jika perlu -->
+        <!-- Bisa tambah tombol langsung ke RegisterFragment -->
+        <Button
+            android:id="@+id/btnMulai"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Mulai"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/headerColor"
+            android:visibility="gone"/> <!-- opsional, bisa diatur di kode -->
     </LinearLayout>
 
-    <!-- FLOATING BUTTON (sudah ada) -->
+    <!-- FLOATING BUTTON -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNext"
         android:layout_width="wrap_content"
@@ -83,6 +92,6 @@
         android:layout_gravity="bottom|end"
         android:contentDescription="Next"
         app:backgroundTint="#2F7F7B"
-        app:srcCompat="@android:drawable/ic_media_next"/>
+        app:srcCompat="@android:drawable/ic_media_next" />
 
 </FrameLayout>

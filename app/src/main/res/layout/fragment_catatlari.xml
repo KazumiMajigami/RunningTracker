@@ -2,67 +2,145 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:fillViewport="true"
+    android:background="@color/softBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/journey_title"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp"
-            android:textColor="?android:textColorPrimary" />
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/header_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="50dp">
 
-        <EditText
-            android:id="@+id/etTanggal"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUNTRACK"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Let's Share Your Journey"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- CARD FORM -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_tanggal"
-            android:inputType="date"
-            android:minHeight="48dp"
-            android:autofillHints="date"
-            android:textColor="?android:textColorPrimary"
-            android:textColorHint="?android:textColorHint" />
+            android:layout_margin="24dp"
+            android:padding="24dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg">
 
-        <EditText
-            android:id="@+id/etJarak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_jarak"
-            android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            android:layout_marginTop="16dp"
-            android:autofillHints="none"
-            android:textColor="?android:textColorPrimary"
-            android:textColorHint="?android:textColorHint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATAT AKTIVITAS LARI"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                android:layout_marginBottom="20dp" />
 
-        <EditText
-            android:id="@+id/etDurasi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_durasi"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:layout_marginTop="16dp"
-            android:autofillHints="none"
-            android:textColor="?android:textColorPrimary"
-            android:textColorHint="?android:textColorHint" />
+            <!-- Tanggal -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TANGGAL"
+                android:textSize="12sp"
+                android:textColor="@color/textSoft" />
 
+            <EditText
+                android:id="@+id/etTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="dd/mm/yyyy"
+                android:textColor="@color/textDark"
+                android:textColorHint="@color/textSoft"
+                android:backgroundTint="@color/headerColor"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Jarak -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JARAK LARI"
+                android:textSize="12sp"
+                android:textColor="@color/textSoft" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/etJarak"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Contoh: 5.3"
+                    android:textColor="@color/textDark"
+                    android:textColorHint="@color/textSoft"
+                    android:backgroundTint="@color/headerColor"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="km"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textDark"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Durasi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DURASI"
+                android:textSize="12sp"
+                android:textColor="@color/textSoft"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/etDurasi"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Contoh: 30 menit"
+                android:textColor="@color/textDark"
+                android:textColorHint="@color/textSoft"
+                android:backgroundTint="@color/headerColor"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <!-- BUTTON SAVE -->
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="@string/save"
-            android:minHeight="48dp"
-            android:layout_marginTop="32dp" />
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/headerColor"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
 </ScrollView>
-

@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_beranda) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,7 +29,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         // CATAT LARI → sementara cuma toast
         btnCatat.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, RunEntryFragment())
+                .replace(R.id.fragmentContainer, Catatlari())
                 .addToBackStack(null)
                 .commit()
         }

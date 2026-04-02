@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 
-class RunEntryFragment : Fragment(R.layout.fragment_catatlari) {
+class Catatlari : Fragment(R.layout.fragment_catatlari) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
